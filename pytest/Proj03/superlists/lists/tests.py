@@ -1,17 +1,20 @@
 """
-    Lists page test cases
+    "Lists page" test cases
 """
+from django.core.urlresolvers import resolve
 from django.test import TestCase
+from lists.views import home_page
 
 # Create your tests here.
 
 
-class SmokeTest(TestCase):
+class HomePageTest(TestCase):
     """
-        Class created to test if I'm able to use django's test structure
+        asdf
     """
-    def test_bad_maths(self):
+    def test_root_url_resolves_to_home_page_view(self):
         """
-            Silly and useless test with no meaning other than failing :)
+            Insert docstring
         """
-        self.assertEqual(1 + 1, 3)
+        found = resolve('/')
+        self.assertEqual(found.func, home_page)
