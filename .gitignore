@@ -3,3 +3,4 @@ __pycache__
 .cache/
 *.log
 db.sqlite3
+pytest/Proj03/static
